@@ -1,0 +1,60 @@
+.frase {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	
+	@include sm {
+		padding: 5rem 0;
+	}
+	
+	@include lg { 
+		min-height: 90vh;
+	}
+
+
+	&__logo {
+		width: 50%;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+
+	&__svg {
+		// fill: var(--ceniza);
+		@include sm {
+			height: 5rem;
+		}
+
+		@include lg {
+			// width: 5rem;
+			height: 5rem;
+			
+		}
+	}
+
+	&__texto {
+		text-align: center;
+		width: 80%;
+		
+		
+		& h1,
+		& .fonth1 {
+			@include sm {
+				font-size: 1.5rem;
+			}
+
+			@include lg {
+				font-size: 2.5rem;
+				margin: 1rem 0;
+			}
+		}
+
+		& h1 {
+			font-weight: 900;
+		}
+	}
+}

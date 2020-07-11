@@ -1,0 +1,264 @@
+.contacto {
+	width: 100%;
+	position: relative;
+	
+
+	@include sm {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@include lg {
+		// display: flex;
+		// flex-flow: row;
+		// justify-content: center;
+		// align-items: flex-start;
+		display: grid;
+		grid-template-columns: 35% 65%;
+		grid-template-rows: auto;
+
+	}
+
+
+	&__formulario {
+		display: flex;
+		flex-flow: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		text-align: left;
+		background-color: var(--oldBlue);
+		color: var(--ceniza);
+		width: 100%;
+
+		@include sm {
+			// width: 100%;
+			padding: 3rem 2rem;
+		}
+		
+		@include lg {
+			// width: 35%;
+			grid-column: 1/2;
+			grid-row: 1/2;
+			padding: 1rem 4rem;
+		}
+
+
+		&--Logo {
+			// width: 100%;
+			// height: 5rem;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-flow: row;
+			justify-content: flex-start;
+			align-items: flex-start;
+			
+			.logo__svg {
+				width: 5rem;
+			}
+		}
+
+		&--Texto {
+			h3 {
+				margin-bottom: .5rem;
+			}
+		}
+
+		&--Form {
+			width: 100%;
+			margin: 4rem 0;
+		}
+
+		&--name,
+		&--phone,
+		&--email,
+		&--message {
+			margin: 0 0 3rem 0;
+			// display: block;
+		    width: 100%;
+		    // height: calc(2.25rem + 2px);
+		    padding: 0 0 .5rem 0rem;
+		    font-size: 1rem;
+		    line-height: 1.5;
+		    color: #495057;
+		    background-color: transparent;
+		    background-clip: padding-box;
+		    border-style: solid;
+		    border-color: var(--ceniza);
+		    // border-radius: .25rem;
+		    // transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+			border-width: 0 0 1px 0;
+		}
+
+		.contacto__input {
+			background-color: transparent;
+			border: 0px;
+			color: var(--ceniza);
+			font-style: italic;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 1.25rem;
+			width: 100%;
+		}
+
+
+		&--send {
+			text-align: right; 
+		}
+
+		.contacto__button {
+			background-color: var(--red);
+			border: 0;
+			padding: .5rem 1rem;
+			color: var(--ceniza);
+			font-weight: 400;
+		}
+
+		&--emailGeneral {
+			width: 100%;
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	}
+
+
+
+	&__mapa {
+		
+		// display: flex;
+		text-align: left;
+		width: 100%;
+		// background-color: orange;
+
+		
+
+		@include sm {
+			position: relative;
+			// width: 100%;
+			min-height: 90vh;
+			display: flex;
+			flex-flow: column;
+			justify-content: flex-end;
+			align-items: center;
+		}
+		
+		@include lg {
+			position: absolute;
+			grid-column: 2/3;
+			grid-row: 1/2;
+			// width: 65%;
+			min-height: 90vh;
+			height: 100%;
+			display: grid;
+			grid-template-columns: 100%;
+			grid-template-rows: 50% 50%;
+			// flex-flow: column;
+			// justify-content: flex-end;
+			// align-items: flex-end;
+			
+		}
+	}
+
+	.mapa__Google {
+		// background-color: red;
+		
+		top: 0;
+		left: 0;
+		width: 100%;
+		
+		
+
+		@include sm {
+			position: relative;
+			min-height: 100vh;
+		}
+		
+		@include lg {
+			position: absolute;
+			z-index: 1;
+			grid-column: 1/2;
+			grid-row: 1/3;	
+			min-height: 100%;					
+		}
+
+		iframe {
+			@include sm {
+				position: relative;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 1;	
+			}
+
+			@include lg {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+			}
+		}
+	}
+
+	.mapa__Info {
+		z-index: 3;
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		background-color: var(--oldBlue);		
+
+		@include sm {
+			justify-content: center;
+			position: relative;
+			width: 100%;
+			height: 30vh;
+			font-size: 75%;
+			margin: 0 0 .1rem 0
+		}
+		
+		@include lg {
+			position: absolute;
+			justify-content: space-around;
+			bottom: 0;
+			right: 0;
+			width: 80%;
+			height: 25vh;
+			margin: 0 0 3rem 0;
+			grid-column: 1/2;
+			grid-row: 2/3;
+			font-size: 100%;
+		}
+
+		.pin {
+			@include sm {
+				width: 0%;
+			}
+			
+			@include lg {
+				width: 20%;
+			}
+			
+
+			&__svg {
+				height: 2rem;
+				width: 100%;
+			}
+		}
+
+		.direccion {
+			width: 40%;
+			color: var(--ceniza);
+		}
+
+		.numeros {
+			width: 40%;
+			color: var(--ceniza);
+		}
+	}
+}

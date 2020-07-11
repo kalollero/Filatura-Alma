@@ -1,0 +1,101 @@
+//Media Queries
+@import "_media_queries.scss";
+
+/* ================================
+		ESTILOS GENERALES
+=================================*/
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+	@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap');
+
+
+	.hidden {
+		position: absolute;
+		overflow: hidden;
+		width: 0;
+		height: 0;
+		pointer-events: none;
+	}
+
+	.sig{fill:#010101;}
+	.motionLoops {fill:#FFFFFF;}
+	.globalArchive {fill:#FFFFFF;}
+
+	.nav { z-index: 18;}
+	.home { z-index: 16;}
+	.navegacion { z-index: 14;}
+	.about,
+	.video,
+	.gallery,
+	.frase,
+	.contacto,
+	.footer { z-index: 8;}
+
+	// section {
+	// 	width: 100%;
+	// 	height: auto;
+	// 	position: relative;
+	// 	@include sm {
+	// 		padding: 3rem 10%;
+			
+	// 	}
+
+	// 	@include lg {
+	// 		padding: 4rem 5%;
+	// 	}
+	// }
+
+	.red { color: var(--red) !important; }
+	
+	.fonth1 {  font-size: 2.5rem; font-weight: 400; }
+
+	.fonth2 { font-size: 2rem; font-weight: 400; }
+
+	.fonth3 { font-size: 1.75rem; font-weight: 400; }
+
+	.fonth4 { font-size: 1.5rem; font-weight: 400; }
+
+	.fonth5 { font-size: 1.25rem; font-weight: 400; }
+
+	.fonth6 { font-size: 1rem; font-weight: 400; }
+	
+	.font14{ font-size: 14px; font-weight: 400; }
+	
+	.font12{ font-size: 12px; font-weight: 400; }
+
+	.playFair {
+		font-family: 'Playfair Display', serif;
+		font-weight: 400;
+	}
+
+	.em { font-style: italic; }
+
+
+
+/* ================================
+		INICIAN MÓDULOS
+=================================*/
+
+/* -------- Nav --------*/
+@import "landingHome/_nav.scss";
+
+/* -------- Home --------*/
+@import "landingHome/_home.scss";
+
+/* -------- About --------*/
+@import "landingHome/_about.scss";
+
+/* -------- video --------*/
+@import "landingHome/_video.scss";
+
+/* -------- gallery --------*/
+@import "landingHome/_gallery.scss";
+
+/* -------- frase --------*/
+@import "landingHome/_frase.scss";
+
+/* -------- contacto --------*/
+@import "landingHome/_contacto.scss";
+
+/* -------- footer --------*/
+@import "landingHome/_footer.scss";
+
